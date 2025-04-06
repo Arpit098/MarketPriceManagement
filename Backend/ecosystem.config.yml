@@ -1,0 +1,11 @@
+apps:
+  - name: dailyapmc          # Name of your application
+    script: ./src/server.js           # Path to your main application file
+    instances: 1             # Number of instances to run (use 'max' for cluster mode)
+    exec_mode: cluster         # Run in cluster mode
+    watch: true                 # Enable watching for file changes
+    env:                        # Environment variables for development
+      NODE_ENV: development
+    env_production:             # Environment variables for production
+      NODE_ENV: production
+    time: true                  # Enable timestamps in logs
